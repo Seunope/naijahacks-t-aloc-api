@@ -83,8 +83,14 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://github.com/laravel/laravel">Community Answers for Past Questions</a>
+                    <a>Community Answers for Past Questions</a>
                 </div>
+
+                <br><br>
+                <a href="{{url('flagged')}}">List Flagged Questions</a>
+                <br><br><br>
+                <a href="{{url('flagged/1')}}">Question Details</a>
+
             </div>
         </div>
     </body>
