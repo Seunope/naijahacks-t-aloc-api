@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Flagged Question</div>
+                    <div class="panel-heading">  <strong>Flagged Question  </strong></div>
 
                     <div class="panel-body">
                         @if (session('status'))
@@ -22,8 +22,17 @@
                             </div>
                         @endif
 
-                        Fagged Questions goes here
+                      >>Welcome Dude!<<
                     </div>
+
+                    @if(!$flaggedQuestion->isEmpty())
+                        @foreach($flaggedQuestion as $question)
+                            <div class="panel-body">
+                                {{$question->question}}
+                            </div>
+                            <hr>
+                        @endforeach
+                    @endif
                 </div>
             </div>
         </div>
