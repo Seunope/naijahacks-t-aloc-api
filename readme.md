@@ -1,8 +1,8 @@
-## Hackathon 2018
+# Hackathon 2018
 
-### Team name : T-ALOC
+## Team name : T-ALOC
 
-# Team Members
+## Team Members
 Opeoluwa Mesonrale (ope.mesonrale@gmail.com)
 Ajiferuke Oluwatomiwa (ajiferukeolatommy@gmail.com)
 Joshua Odoi (odoijoshua55@gmail.com)
