@@ -1,17 +1,17 @@
-##Hackathon 2018
+## Hackathon 2018
 
-###Team name : T-ALOC
+### Team name : T-ALOC
 
-#Team Members
+# Team Members
 Opeoluwa Mesonrale (ope.mesonrale@gmail.com)
 Ajiferuke Oluwatomiwa (ajiferukeolatommy@gmail.com)
 Joshua Odoi (odoijoshua55@gmail.com)
 
-##Problem
+## Problem
 Students and educators find it difficult to debate around correctness of answers to past questions. Lack of an online community platform to have this discussion forces down educators answers to students which hinder learning development process for students.
 
-##Solution
+## Solution
 We make an app that provides Community Answers to Past Exam Questions
 
-##Stack
+## Stack
 React, Laravel, MySQL
