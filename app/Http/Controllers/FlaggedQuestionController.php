@@ -50,7 +50,10 @@ class FlaggedQuestionController extends Controller
      */
     public function show($id)
     {
-        return view('question_details');
+        $res =  QuestionFlaggged::find($id);
+        $data['QuestionDetails'] = $res;
+
+        return view('question_details', $data);
     }
 
     /**

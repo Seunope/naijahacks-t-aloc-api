@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Questions Details</div>
+                    <div class="panel-heading">Questions Details |  <a href="{{url('/home')}}">Home</a> |  <a href="{{url('/flagged')}}">Flagged</a></div>
 
                     <div class="panel-body">
                         @if (session('status'))
@@ -22,6 +22,12 @@
                         @endif
 
                         Question details goes here
+                        {{$QuestionDetails->question}}
+                        <p>a) {{$QuestionDetails->option_a}}</p>
+                        <p>b) {{$QuestionDetails->option_b}}</p>
+                        <p>c) {{$QuestionDetails->option_c}}</p>
+                        <p>d) {{$QuestionDetails->option_d}}</p>
+
                     </div>
                 </div>
             </div>

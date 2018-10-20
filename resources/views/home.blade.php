@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <a href="{{url('/flagged')}}">Flagged Questions</a>
                 </div>
                 <a href="{{url('/load-questions')}}" ><button class="btn btn-primary btn-sm">Load Dummy Questions</button></a>
             </div>

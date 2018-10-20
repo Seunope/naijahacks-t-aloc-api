@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">  <strong>Flagged Question  </strong></div>
+                    <div class="panel-heading">  <strong>Flagged Question  </strong> |  <a href="{{url('/home')}}">Home</a></div>
 
                     <div class="panel-body">
                         @if (session('status'))
@@ -23,12 +23,13 @@
                         @endif
 
                     </div>
-
+                    {{ $flaggedQuestion->links() }}
                     @if(!$flaggedQuestion->isEmpty())
                         @foreach($flaggedQuestion as $question)
                             <div class="panel-body">
-                                <p>{{$question->question}}</p>
-                                <a>Vote (0)</a> || <a> comment(o)</a>
+                                <p><strong>{{ucfirst($question->subject)}} :</strong> {{$question->question}}</p>
+                                <a href="{{url('/flagged/'.$question->id)}}">Vote (0)</a> ||
+                                <a href="{{url('/flagged/'.$question->id)}}"> comment(o)</a>
                                 <p> {{timeAgo($question->created_at)}}</p>
                             </div>
 

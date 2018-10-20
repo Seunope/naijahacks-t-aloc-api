@@ -210,9 +210,9 @@
     <div class="collapse navbar-collapse" id="myNavbar">
     @if (Route::has('login'))
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#services">SERVICES</a></li>
-        <li><a href="#portfolio">SOLUTIONS</a></li>
+        {{--<li><a href="#about">ABOUT</a></li>--}}
+        {{--<li><a href="#services">SERVICES</a></li>--}}
+        {{--<li><a href="#portfolio">SOLUTIONS</a></li>--}}
         @if (Auth::check())
         <li><a href="{{ url('/home') }}">DASHBOARD</a></li>
         @else
@@ -239,7 +239,7 @@
   <div class="row">
     <div class="col-sm-8">
       <h2>About Question Manager</h2><br>
-      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
+      <h4>Meet team T-ALOC: #NaijaHack2018 Opeoluwa Mesonrale (ope.mesonrale@gmail.com) Ajiferuke Oluwatomiwa (ajiferukeolatommy@gmail.com) Joshua Odoi (odoijoshua55@gmail.com).</h4><br>
       <br><button class="btn btn-default btn-lg">Get in Touch</button>
     </div>
     <div class="col-sm-4">
@@ -254,9 +254,8 @@
       <span class="glyphicon glyphicon-globe logo slideanim"></span>
     </div>
     <div class="col-sm-8">
-      <h4><strong>OUR MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-      <p><strong>OUR VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h4><strong>THE PROBLEM:</strong> Students and educators find it difficult to debate around correctness of answers to past questions. Lack of an online community platform to have this discussion forces down educators answers to students which hinder learning development process for students.</h4><br>
+      <p><strong>OUR VISION:</strong> Community answers to past examination questions</p>
     </div>
   </div>
 </div>
