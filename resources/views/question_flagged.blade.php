@@ -22,17 +22,21 @@
                             </div>
                         @endif
 
-                      >>Welcome Dude!<<
                     </div>
 
                     @if(!$flaggedQuestion->isEmpty())
                         @foreach($flaggedQuestion as $question)
                             <div class="panel-body">
-                                {{$question->question}}
+                                <p>{{$question->question}}</p>
+                                <a>Vote (0)</a> || <a> comment(o)</a>
+                                <p> {{timeAgo($question->created_at)}}</p>
                             </div>
+
                             <hr>
                         @endforeach
                     @endif
+                    {{ $flaggedQuestion->links() }}
+
                 </div>
             </div>
         </div>
