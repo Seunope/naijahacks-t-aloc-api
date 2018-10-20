@@ -20,5 +20,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('flagged', 'FlaggedQuestionController');
 Route::get('/load-questions', 'FlaggedQuestionController@loadFlaggedQuestions');
+Route::get('/vote-up/{id}', 'VoteController@castUpVote');
+Route::get('/vote-down/{id}', 'VoteController@castDownVote');
+
+
 
 

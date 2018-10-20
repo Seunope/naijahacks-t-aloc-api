@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\QuestionFlaggged;
+use App\Models\Vote;
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 
@@ -51,7 +52,10 @@ class FlaggedQuestionController extends Controller
     public function show($id)
     {
         $res =  QuestionFlaggged::find($id);
-        $data['QuestionDetails'] = $res;
+        $voted = Vote::whereQuestion_flag_id($id)->first();
+        $data['questionDetails'] = $res;
+        $data['votes'] = $voted;
+
 
         return view('question_details', $data);
     }

@@ -212,7 +212,7 @@
       <ul class="nav navbar-nav navbar-right">
         {{--<li><a href="#about">ABOUT</a></li>--}}
         {{--<li><a href="#services">SERVICES</a></li>--}}
-        {{--<li><a href="#portfolio">SOLUTIONS</a></li>--}}
+        <li><a href="{{url('/flagged')}}">FLAGGED</a></li>
         @if (Auth::check())
         <li><a href="{{ url('/home') }}">DASHBOARD</a></li>
         @else

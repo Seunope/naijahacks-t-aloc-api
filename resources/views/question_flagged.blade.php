@@ -26,9 +26,13 @@
                     {{ $flaggedQuestion->links() }}
                     @if(!$flaggedQuestion->isEmpty())
                         @foreach($flaggedQuestion as $question)
+                            <?php $vote =0; ?>
+                            @if(!is_null($question->vote))
+                               <?php $vote = $question->vote->up_vote + $question->vote->down_vote; ?>
+                            @endif
                             <div class="panel-body">
                                 <p><strong>{{ucfirst($question->subject)}} :</strong> {{$question->question}}</p>
-                                <a href="{{url('/flagged/'.$question->id)}}">Vote (0)</a> ||
+                                <a href="{{url('/flagged/'.$question->id)}}">vote ({{$vote}})</a> ||
                                 <a href="{{url('/flagged/'.$question->id)}}"> comment(o)</a>
                                 <p> {{timeAgo($question->created_at)}}</p>
                             </div>
