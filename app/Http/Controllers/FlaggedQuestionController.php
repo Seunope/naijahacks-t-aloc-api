@@ -15,7 +15,7 @@ class FlaggedQuestionController extends Controller
      */
     public function index()
     {
-        $res = QuestionFlaggged::paginate(15);;
+        $res = QuestionFlaggged::get();
         $data['flaggedQuestion'] = $res;
         return view('question_flagged', $data);
 
