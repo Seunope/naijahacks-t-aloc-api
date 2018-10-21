@@ -15,8 +15,12 @@ class FlaggedQuestionController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         $res = QuestionFlaggged::paginate(15);;
         $res = QuestionFlaggged::get();
+=======
+        $res = QuestionFlaggged::paginate(15);
+>>>>>>> cccda07aee901244572280a87e29694322c82ceb
         $data['flaggedQuestion'] = $res;
         return view('question_flagged', $data);
 
@@ -95,7 +99,7 @@ class FlaggedQuestionController extends Controller
             $this->dummyQuestion($subjectArray[$i]);
         }
 
-        return view('question_flagged');
+        return redirect('/flagged');
     }
 
     public function dummyQuestion($subject){
@@ -111,6 +115,7 @@ class FlaggedQuestionController extends Controller
                 $data['exam_type'] = $data['examtype'];
                 $data['exam_year'] = $data['examtype'];
                 $data['question_id'] = $data['id'];
+                $data['subject'] = $subject;
                 $data['solution'] = "None for now";
                 $data['question_number'] = rand(1,50);
                 $option = (array) $data['option'];
@@ -124,7 +129,7 @@ class FlaggedQuestionController extends Controller
 
 
         } catch (\Exception $e) {
-            //dd($e);
+//            dd($e);
             //return "Something got broken. Refresh or Check internet connection"  ;
         }
 
