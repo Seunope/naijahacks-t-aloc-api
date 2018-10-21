@@ -1,4 +1,6 @@
 <?php
+use Illuminate\Support\Facades\Auth;
+
 /**
  * Created by PhpStorm.
  * User: Gathem
@@ -59,4 +61,14 @@ function timeAgo($time_ago)
         if($years==1){return "one yr ago";}
         else{return "$years yrs ago";}
     }
+}
+
+function getUserID(){
+    if(Auth::check()){
+        $userID = auth()->user()->id;
+    }else {
+        $userID = 0; //anomalous
+    }
+
+    return $userID;
 }

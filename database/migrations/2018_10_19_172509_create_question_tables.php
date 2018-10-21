@@ -33,7 +33,7 @@ class CreateQuestionTables extends Migration
             $table->increments('id');
             $table->integer('question_flag_id');
             $table->string('comment');
-            $table->integer('comment_by');;
+            $table->integer('comment_by');
             $table->timestamps();
         });
 

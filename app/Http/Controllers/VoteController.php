@@ -24,7 +24,7 @@ class VoteController extends Controller
         }
 
         $input2['vote_id'] = $vote->id;
-        $input2['vote_by'] = $this->getUserID();
+        $input2['vote_by'] = getUserID();
         $input2['type'] = "up";
 
         VoteTracker::create($input2);
@@ -46,20 +46,10 @@ class VoteController extends Controller
         }
 
         $input2['vote_id'] = $vote->id;
-        $input2['vote_by'] = $this->getUserID();
+        $input2['vote_by'] = getUserID();
         $input2['type'] = "down";
         VoteTracker::create($input2);
 
         return back();
-    }
-
-    private function getUserID(){
-        if(Auth::check()){
-            $userID = auth()->user()->id;
-        }else {
-            $userID = 0; //anomalous
-        }
-
-        return $userID;
     }
 }
