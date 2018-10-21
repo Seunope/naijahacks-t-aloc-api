@@ -12,8 +12,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div class="panel-heading">  <strong>Flagged Question  </strong> |  <a href="{{url('/home')}}">Home</a></div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">  <strong>Flagged Question  </strong> |  <a href="{{url('/home')}}"><span class="label label-default">Home</span></a></div>
 
                     <div class="panel-body">
                         @if (session('status'))
@@ -23,7 +23,7 @@
                         @endif
 
                     </div>
-                    {{ $flaggedQuestion->links() }}
+                    <center>{{ $flaggedQuestion->links() }}</center>
                     @if(!$flaggedQuestion->isEmpty())
                         @foreach($flaggedQuestion as $question)
                             <?php $vote =0; ?>
@@ -31,7 +31,7 @@
                                <?php $vote = $question->vote->up_vote + $question->vote->down_vote; ?>
                             @endif
                             <div class="panel-body">
-                                <p><strong>{{ucfirst($question->subject)}} :</strong> {{$question->question}}</p>
+                                <p><strong>{!! ucfirst($question->subject) !!} :</strong> {!! $question->question !!}</p>
                                 <a href="{{url('/flagged/'.$question->id)}}">vote ({{$vote}})</a> ||
                                 <a href="{{url('/flagged/'.$question->id)}}"> comment(o)</a>
                                 <p> {{timeAgo($question->created_at)}}</p>
@@ -40,7 +40,7 @@
                             <hr>
                         @endforeach
                     @endif
-                    {{ $flaggedQuestion->links() }}
+                    <center>{{ $flaggedQuestion->links() }}</center>
 
                 </div>
             </div>

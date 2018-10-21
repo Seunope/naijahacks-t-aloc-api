@@ -11,8 +11,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Questions Details |  <a href="{{url('/home')}}">Home</a> |  <a href="{{url('/flagged')}}">Flagged</a>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Questions Details |  <a href="{{url('/home')}}"><span class="label label-default">Home</span></a> |  <a href="{{url('/flagged')}}"><span class="label label-info">Flagged</span></a>
                     <div align="right">@if(!is_null($votes) ){{$votes->up_vote}} up | {{$votes->down_vote}} down @else up | down @endif</div>
                     </div>
 
@@ -23,13 +23,13 @@
                             </div>
                         @endif
 
-                        <strong>{{ucfirst($questionDetails->subject)}}</strong>
-                        <p>{{$questionDetails->question}}</p>
-                        <p>a) {{$questionDetails->option_a}}</p>
-                        <p>b) {{$questionDetails->option_b}}</p>
-                        <p>c) {{$questionDetails->option_c}}</p>
-                        <p>d) {{$questionDetails->option_d}}</p>
-                        <p><strong><i>Ans:</i></strong> {{$questionDetails->answer}}</p>
+                        <strong>{!! ucfirst($questionDetails->subject) !!}</strong>
+                        <p>{!! $questionDetails->question !!}</p>
+                        <p>a) {!! $questionDetails->option_a !!}</p>
+                        <p>b) {!! $questionDetails->option_b !!}</p>
+                        <p>c) {!! $questionDetails->option_c !!}</p>
+                        <p>d) {!! $questionDetails->option_d !!}</p>
+                        <p><strong><i>Ans:</i></strong> {!! $questionDetails->answer !!}</p>
                          <hr>
                             <p>vote correctness:
                                 <a href="{{url('/vote-up/'.$questionDetails->id)}}"> up</a> I
