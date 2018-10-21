@@ -35,7 +35,7 @@
                             <hr>
                         @endforeach
                     @endif
-{{--                    {{ $flaggedQuestion->links() }}--}}
+                    {{ $flaggedQuestion->links() }}
 
                 </div>
             </div>
