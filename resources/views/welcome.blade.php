@@ -227,10 +227,11 @@
 
 <div class="jumbotron text-center">
   <h1>Question Manager</h1> 
-  <p>Search for a solution</p> 
-  <form class="form-inline">
-    <input type="text" class="form-control" size="50" placeholder="Type Question" required>
-    <button type="button" class="btn btn-danger">Go !</button>
+  <p>Search for a solution</p>
+  <form class="form-inline" action="{{ url('/search') }}" method="post" role="form" >
+    <input type="text" name="search" class="form-control" size="50" placeholder="Type Question" required>
+    <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+    <button type="submit" class="btn btn-danger">Go !</button>
   </form>
 </div>
 

@@ -10,10 +10,23 @@
 @section('content')
     <div class="container">
         <div class="row">
-            @include('flash::message')
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-2">
+                <p>Search By</p>
+                <ul>
+                    <li><a href="{{url('/search')}}">Question</a></li>
+                    <li>Subject</li>
+                    <li>Exam Type</li>
+                    <li>Year</li>
+                </ul>
+            </div>
+            <div class="col-md-8 col-md-">
+                @include('flash::message')
+
                 <div class="panel panel-primary">
-                    <div class="panel-heading">Questions Details |  <a href="{{url('/home')}}"><span class="label label-default">Home</span></a> |  <a href="{{url('/flagged')}}"><span class="label label-info">Flagged</span></a>
+                    <div class="panel-heading">Questions Details |
+                            <a href="{{url('/home')}}"><span class="label label-default">Home</span></a> |
+                            <a href="{{url('/flagged')}}"> <span class="label label-info">Flagged</span></a> |
+                            <a href="{{url('/search')}}"><span class="label label-info">Search</span></a>
                     <div align="right">@if(!is_null($votes) ){{$votes->up_vote}} up | {{$votes->down_vote}} down @else up | down @endif</div>
                     </div>
 
@@ -78,7 +91,25 @@
                     </div>
                     </div>
                 </div>
-            </div>
+                <div class="col-md-2">
+                    <p>Recently Flagged</p>
+                    <ul>
+                        <li><a href="{{url('flagged/1')}}">What is the meaning of..</a> </li>
+                        <li><a href="{{url('flagged/1')}}">When did Nigeria gained inde...</a> </li>
+                        <li><a href="{{url('flagged/1')}}">How many apples</a> </li>
+                        <li><a href="{{url('flagged/1')}}">Mixtures of two chemical..</a> </li>
+                    </ul>
+
+                    <p>Most Popular</p>
+                    <ul>
+                        <li>Ajaa...</li>
+                        <li>Money.. </li>
+                        <li>Hope for Live</li>
+                        <li>Year</li>
+                    </ul>
+                </div>
+            {{--</div>--}}
+
         </div>
     </div>
     {{--<script type="text/javascript">--}}

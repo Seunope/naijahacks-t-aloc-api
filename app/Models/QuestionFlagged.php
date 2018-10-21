@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use GuzzleHttp\Client;
 
-class QuestionFlaggged extends Model
+class QuestionFlagged extends Model
 {
     protected $table = 'question_flag';
 

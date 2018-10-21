@@ -11,9 +11,21 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-2">
+                <p>Search By</p>
+                <ul>
+                    <li><a href="{{url('/search')}}">Question</a></li>
+                    <li>Subject</li>
+                    <li>Exam Type</li>
+                    <li>Year</li>
+                </ul>
+            </div>
+            <div class="col-md-8 col-md-">
                 <div class="panel panel-primary">
-                    <div class="panel-heading">  <strong>Flagged Question  </strong> |  <a href="{{url('/home')}}"><span class="label label-default">Home</span></a></div>
+                    <div class="panel-heading">  <strong>Flagged Question  </strong> |
+                        <a href="{{url('/home')}}"><span class="label label-default">Home</span></a> |
+                        <a href="{{url('/search')}}"><span class="label label-info">Search</span></a>
+                    </div>
 
                     <div class="panel-body">
                         @if (session('status'))
@@ -43,6 +55,23 @@
                     <center>{{ $flaggedQuestion->links() }}</center>
 
                 </div>
+            </div>
+            <div class="col-md-2">
+                <p>Recently Flagged</p>
+                <ul>
+                    <li><a href="{{url('flagged/1')}}">What is the meaning of..</a> </li>
+                    <li><a href="{{url('flagged/1')}}">When did Nigeria gained inde...</a> </li>
+                    <li><a href="{{url('flagged/1')}}">How many apples</a> </li>
+                    <li><a href="{{url('flagged/1')}}">Mixtures of two chemical..</a> </li>
+                </ul>
+
+                <p>Most Popular</p>
+                <ul>
+                    <li>Ajaa...</li>
+                    <li>Money.. </li>
+                    <li>Hope for Live</li>
+                    <li>Year</li>
+                </ul>
             </div>
         </div>
     </div>
