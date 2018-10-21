@@ -26,7 +26,7 @@ class VoteController extends Controller
         $input2['vote_id'] = $vote->id;
         $input2['vote_by'] = getUserID();
         $input2['type'] = "up";
-
+        flash('You have cast your vote');
         VoteTracker::create($input2);
         return back();
     }
@@ -48,6 +48,7 @@ class VoteController extends Controller
         $input2['vote_id'] = $vote->id;
         $input2['vote_by'] = getUserID();
         $input2['type'] = "down";
+        flash('You have cast your vote');
         VoteTracker::create($input2);
 
         return back();

@@ -4,30 +4,34 @@ namespace App\Http\Controllers;
 
 use App\Models\QuestionComment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Validator;
 
 class CommentController extends Controller
 {
     public function  commentOnQuestion(Request $request)
     {
+        if(!Auth::check()){
+            flash('Aw! You have to login to add comment')->warning();
+            return back();
+        }
+
         $input = $request->all();
-dd(getUserID());
-        $input['comment_by'] =  getUserID;
+        $input['comment_by'] =  getUserID();
         //test it message empty page was sent
         $validator = Validator::make($input, [
-            'comment' => 'required',
+            'comment' => 'required|min:5',
         ]);
 
-        if($validator->passes())
-        {
+        if($validator->passes()) {
             //save data
+            $input['comment'] = ucfirst($input['comment']);
             QuestionComment::create($input);
-            return back()->with('message', 'Yeah! You just post a discussion');
-        }
-        else
-        {
-            return back()->withInput()->with('message', 'Please fill all entry')
-                ->withErrors($validator);
+            flash('Comment saved');
+            return back();
+        } else {
+            flash('Whoops! Add a comment before saving')->error();
+            return back();
         }
     }
 }

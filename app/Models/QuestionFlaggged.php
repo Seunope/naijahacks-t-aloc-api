@@ -20,9 +20,4 @@ class QuestionFlaggged extends Model
         return $this->belongsTo('App\Models\Vote', 'id','question_flag_id');
     }
 
-
-    public function retail_outlet()
-    {
-        return $this->belongsTo('App\Models\Retail_outlet', 'retail_outlet_id');
-    }
 }

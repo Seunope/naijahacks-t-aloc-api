@@ -22,7 +22,7 @@ Route::resource('flagged', 'FlaggedQuestionController');
 Route::get('/load-questions', 'FlaggedQuestionController@loadFlaggedQuestions');
 Route::get('/vote-up/{id}', 'VoteController@castUpVote');
 Route::get('/vote-down/{id}', 'VoteController@castDownVote');
-Route::get('/comment-question', 'CommentController@commentOnQuestion');
+Route::post('/comment-question', 'CommentController@commentOnQuestion');
 
 
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\QuestionComment;
 use App\Models\QuestionFlaggged;
 use App\Models\Vote;
 use Illuminate\Http\Request;
@@ -53,9 +54,10 @@ class FlaggedQuestionController extends Controller
     {
         $res =  QuestionFlaggged::find($id);
         $voted = Vote::whereQuestion_flag_id($id)->first();
+        $comment = QuestionComment::whereQuestion_flag_id($id)->get();
         $data['questionDetails'] = $res;
         $data['votes'] = $voted;
-
+        $data['comments'] = $comment;
 
         return view('question_details', $data);
     }
