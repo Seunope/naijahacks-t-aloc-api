@@ -205,7 +205,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#myPage">Logo</a>
+      <a class="navbar-brand" href="#myPage">QM</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
     @if (Route::has('login'))
@@ -372,7 +372,7 @@
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
-  <p>Theme Made By <a href="{{ url('/login') }}" title="Visit w3schools">www.questionmanager.com</a></p>		
+  <p>Theme Made By <a href="{{ url('/') }}" title="Visit QM">QuestionsManager</a></p>		
 </footer>
 
 <script>
