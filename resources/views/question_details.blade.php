@@ -29,7 +29,7 @@
                             <a href="{{url('/home')}}"><span class="label label-default">Home</span></a> |
                             <a href="{{url('/flagged')}}"> <span class="label label-info">Flagged</span></a> |
                             <a href="{{url('/search')}}"><span class="label label-info">Search</span></a>
-                    <div align="right">@if(!is_null($votes) ){{$votes->up_vote}} up | {{$votes->down_vote}} down @else up | down @endif</div>
+                    <div align="right">@if(!is_null($votes) ){{$votes->up_vote}} <span class="glyphicon glyphicon-ok"></span> | {{$votes->down_vote}} <span class="glyphicon glyphicon-remove"></span> @else <span class="glyphicon glyphicon-ok"></span> | <span class="glyphicon glyphicon-remove"></span> @endif</div>
                     </div>
 
                     <div class="panel-body">
@@ -48,8 +48,8 @@
                         <p><span class="label label-success"><strong><i>Ans:</i></strong> {!! $questionDetails->answer !!}</span></p>
                          <hr>
                             <p>vote correctness:
-                                <a href="{{url('/vote-up/'.$questionDetails->id)}}"> up</a> I
-                                <a href="{{url('/vote-down/'.$questionDetails->id)}}">down</a> </p>
+                                <a href="{{url('/vote-up/'.$questionDetails->id)}}"><span class="glyphicon glyphicon-ok-circle"></span></a> I
+                                <a href="{{url('/vote-down/'.$questionDetails->id)}}"><span class="glyphicon glyphicon-remove-circle"></span></a> </p>
                             <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Add Comment</button>
                              <!-- Modal -->
                              <div class="modal fade" id="myModal" role="dialog" style="margin-top:25px;">

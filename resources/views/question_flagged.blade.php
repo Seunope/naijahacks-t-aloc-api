@@ -46,8 +46,8 @@
                             @endif
                             <div class="panel-body">
                                 <p><strong>{!! ucfirst($question->subject) !!} :</strong> {!! $question->question !!}</p>
-                                <a href="{{url('/flagged/'.$question->id)}}">vote ({{$vote}})</a> ||
-                                <a href="{{url('/flagged/'.$question->id)}}"> comment(o)</a>
+                                <a href="{{url('/flagged/'.$question->id)}}"><span class="glyphicon glyphicon-hand-up"></span> ({{$vote}})</a> ||
+                                <a href="{{url('/flagged/'.$question->id)}}"><span class="glyphicon glyphicon-comment"></span> (o)</a>
                                 <p> {{timeAgo($question->created_at)}}</p>
                             </div>
 
