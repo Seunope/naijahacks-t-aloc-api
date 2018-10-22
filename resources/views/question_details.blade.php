@@ -24,7 +24,7 @@
             <div class="col-md-8 col-md-">
                 @include('flash::message')
 
-                <div class="panel panel-primary">
+                <div class="panel panel-warning">
                     <div class="panel-heading">Questions Details |
                             <a href="{{url('/home')}}"><span class="label label-default">Home</span></a> |
                             <a href="{{url('/flagged')}}"> <span class="label label-info">Flagged</span></a> |
