@@ -231,7 +231,7 @@
     <form class="form-inline" action="{{ url('/search') }}" method="post" role="form" >
         <input type="text" name="search" class="form-control" size="50" placeholder="Type Question" required>
         <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-        <button type="submit" class="btn btn-danger">Go !</button>
+        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-search"></span></button>
     </form>
 </div>
 

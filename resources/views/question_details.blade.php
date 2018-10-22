@@ -11,13 +11,15 @@
     <div class="container">
         <div class="row">
             <div class="col-md-2">
-                <p>Search By</p>
+            <div class="panel panel-warning">
+                <p>&nbsp&nbsp Search By</p>
                 <ul>
                     <li><a href="{{url('/search')}}">Question</a></li>
                     <li>Subject</li>
                     <li>Exam Type</li>
                     <li>Year</li>
                 </ul>
+                </div>
             </div>
             <div class="col-md-8 col-md-">
                 @include('flash::message')
@@ -43,14 +45,14 @@
                         <p>b) {!! $questionDetails->option_b !!}</p>
                         <p>c) {!! $questionDetails->option_c !!}</p>
                         <p>d) {!! $questionDetails->option_d !!}</p>
-                        <p><strong><i>Ans:</i></strong> {!! $questionDetails->answer !!}</p>
+                        <p><span class="label label-success"><strong><i>Ans:</i></strong> {!! $questionDetails->answer !!}</span></p>
                          <hr>
                             <p>vote correctness:
                                 <a href="{{url('/vote-up/'.$questionDetails->id)}}"> up</a> I
                                 <a href="{{url('/vote-down/'.$questionDetails->id)}}">down</a> </p>
                             <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Add Comment</button>
                              <!-- Modal -->
-                             <div class="modal fade" id="myModal" role="dialog">
+                             <div class="modal fade" id="myModal" role="dialog" style="margin-top:25px;">
                                 <div class="modal-dialog modal-sm">
                                   <div class="modal-content">
                                     <div class="modal-header">
@@ -92,7 +94,8 @@
                     </div>
                 </div>
                 <div class="col-md-2">
-                    <p>Recently Flagged</p>
+                <div class="panel panel-warning">
+                    <p>&nbsp&nbsp Recently Flagged</p>
                     <ul>
                         <li><a href="{{url('flagged/1')}}">What is the meaning of..</a> </li>
                         <li><a href="{{url('flagged/1')}}">When did Nigeria gained inde...</a> </li>
@@ -100,13 +103,14 @@
                         <li><a href="{{url('flagged/1')}}">Mixtures of two chemical..</a> </li>
                     </ul>
 
-                    <p>Most Popular</p>
+                    <p>&nbsp&nbsp Most Popular</p>
                     <ul>
                         <li>Ajaa...</li>
                         <li>Money.. </li>
                         <li>Hope for Live</li>
                         <li>Year</li>
                     </ul>
+                </div>
                 </div>
             {{--</div>--}}
 
