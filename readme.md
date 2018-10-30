@@ -11,7 +11,7 @@ Joshua Odoi (odoijoshua55@gmail.com)
 Students and educators find it difficult to debate around correctness of answers to past questions. Lack of an online community platform to have this discussion forces down educators answers to students which hinder learning development process for students.
 
 ## Solution
-We make an app that provides Community Answers to Past Exam Questions
+We make an app that provides Community Answers to Past Exam Questions.
 
 ## Stack
 React, Laravel, MySQL
